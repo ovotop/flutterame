@@ -30,7 +30,6 @@ def replace_lines(target_reg, *, by_lines, begin_reg,  end_reg, in_lines):
             state == 'find_begin'
             continue
 
-    # print(indexs)
     if len(indexs) == 0:
         return None
 
@@ -56,7 +55,6 @@ def optimize_cn_network(target_file):
         has_google = False
         new_lines = lines
 
-    has_jcenter = True
     new_lines = replace_lines(
         r'\s*jcenter().*',
         by_lines=[
