@@ -1,0 +1,163 @@
+.
+├── .android
+│   ├── .gradle
+│   │   ├── 5.6.2
+│   │   │   ├── executionHistory
+│   │   │   ├── fileChanges
+│   │   │   ├── fileContent
+│   │   │   ├── fileHashes
+│   │   │   ├── gc.properties
+│   │   │   ├── javaCompile
+│   │   │   └── vcsMetadata-1
+│   │   ├── buildOutputCleanup
+│   │   │   ├── buildOutputCleanup.lock
+│   │   │   ├── cache.properties
+│   │   │   └── outputFiles.bin
+│   │   └── vcs-1
+│   │       └── gc.properties
+│   ├── Flutter
+│   │   ├── build
+│   │   │   ├── .transforms
+│   │   │   ├── generated
+│   │   │   ├── intermediates
+│   │   │   ├── outputs
+│   │   │   └── tmp
+│   │   ├── build.gradle
+│   │   ├── flutter.iml
+│   │   └── src
+│   │       └── main
+│   ├── app
+│   │   ├── build.gradle
+│   │   └── src
+│   │       └── main
+│   ├── build.gradle
+│   ├── build.gradle.backup_2021-01-01_12:14:50
+│   ├── gradle
+│   │   └── wrapper
+│   │       ├── gradle-wrapper.jar
+│   │       └── gradle-wrapper.properties
+│   ├── gradle.properties
+│   ├── gradlew
+│   ├── gradlew.bat
+│   ├── include_flutter.groovy
+│   ├── local.properties
+│   └── settings.gradle
+├── .dart_tool
+│   ├── flutter_build
+│   │   └── e4680202ba1aeb535a73173d7f5581cf
+│   │       ├── .filecache
+│   │       ├── app.dill
+│   │       ├── debug_android_application.stamp
+│   │       ├── flutter_assets.d
+│   │       ├── gen_localizations.stamp
+│   │       ├── kernel_snapshot.d
+│   │       ├── kernel_snapshot.stamp
+│   │       └── outputs.json
+│   └── package_config.json
+├── .gitignore
+├── .idea
+│   ├── libraries
+│   │   └── Dart_SDK.xml
+│   ├── modules.xml
+│   └── workspace.xml
+├── .ios
+│   ├── Config
+│   │   ├── Debug.xcconfig
+│   │   ├── Flutter.xcconfig
+│   │   └── Release.xcconfig
+│   ├── Flutter
+│   │   ├── AppFrameworkInfo.plist
+│   │   ├── FlutterPluginRegistrant
+│   │   │   ├── Classes
+│   │   │   └── FlutterPluginRegistrant.podspec
+│   │   ├── Generated.xcconfig
+│   │   ├── README.md
+│   │   ├── engine
+│   │   │   ├── Flutter.framework
+│   │   │   └── Flutter.podspec
+│   │   ├── flutter_export_environment.sh
+│   │   ├── gallery.podspec
+│   │   └── podhelper.rb
+│   ├── Runner
+│   │   ├── AppDelegate.h
+│   │   ├── AppDelegate.m
+│   │   ├── Assets.xcassets
+│   │   │   ├── AppIcon.appiconset
+│   │   │   └── LaunchImage.imageset
+│   │   ├── Base.lproj
+│   │   │   ├── LaunchScreen.storyboard
+│   │   │   └── Main.storyboard
+│   │   ├── Info.plist
+│   │   └── main.m
+│   ├── Runner.xcodeproj
+│   │   ├── project.pbxproj
+│   │   ├── project.xcworkspace
+│   │   │   ├── contents.xcworkspacedata
+│   │   │   └── xcshareddata
+│   │   └── xcshareddata
+│   │       └── xcschemes
+│   └── Runner.xcworkspace
+│       ├── contents.xcworkspacedata
+│       └── xcshareddata
+│           ├── IDEWorkspaceChecks.plist
+│           └── WorkspaceSettings.xcsettings
+├── .metadata
+├── .packages
+├── README.md
+├── build
+│   ├── e6556116c9e6daf1c1fa215dd8ac0d4f
+│   │   └── gen_localizations.stamp
+│   ├── f3c9abfbc6ead4f2206e1e92c67e5c40.cache.dill.track.dill
+│   └── host
+│       ├── generated
+│       │   ├── ap_generated_sources
+│       │   ├── not_namespaced_r_class_sources
+│       │   ├── res
+│       │   └── source
+│       ├── intermediates
+│       │   ├── annotation_processor_list
+│       │   ├── apk_list
+│       │   ├── blame
+│       │   ├── bundle_manifest
+│       │   ├── check_manifest_result
+│       │   ├── compatible_screen_manifest
+│       │   ├── dex
+│       │   ├── duplicate_classes_check
+│       │   ├── external_file_lib_dex_archives
+│       │   ├── external_libs_dex
+│       │   ├── incremental
+│       │   ├── instant_app_manifest
+│       │   ├── javac
+│       │   ├── manifest_merge_blame_file
+│       │   ├── merged_assets
+│       │   ├── merged_java_res
+│       │   ├── merged_jni_libs
+│       │   ├── merged_manifests
+│       │   ├── merged_native_libs
+│       │   ├── merged_shaders
+│       │   ├── metadata_feature_manifest
+│       │   ├── processed_res
+│       │   ├── res
+│       │   ├── shader_assets
+│       │   ├── signing_config
+│       │   ├── stripped_native_libs
+│       │   ├── symbols
+│       │   ├── transforms
+│       │   └── validate_signing_config
+│       ├── outputs
+│       │   ├── apk
+│       │   └── logs
+│       └── tmp
+│           └── compileDebugJavaWithJavac
+├── gallery.iml
+├── gallery_android.iml
+├── lib
+│   ├── galleria.dart
+│   └── main.dart
+├── project.txt
+├── pubspec.lock
+├── pubspec.yaml
+└── test
+    └── widget_test.dart
+
+94 directories, 66 files
