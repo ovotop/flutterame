@@ -6,9 +6,16 @@ else
 module_name=$1
 fi
 
-cd modules
+MODULES_DIR="modules/"
+
+if [ ! -d ${MODULES_DIR} ];then
+  mkdir ${MODULES_DIR}
+fi
+
+CURRENT_DIR=`pwd`
+cd $MODULES_DIR
 flutter create -t module --org top.ovo $module_name
-cd ..
+cd ${CURRENT_DIR}
 
 #TODO insert dependencies in pubspec.yaml
 #TODO Chinese network optimat
