@@ -1,0 +1,21 @@
+{
+  "galleries": [
+    {
+      "name": "《每天和每天不一样》系列1-8辑",
+      "cover": "http://pics.ovo.top/diff_ev_day_1608473963036010zu1nw8kflrqoih5p.jpg",
+      "page": {
+        "index": 0,
+        "items": [
+          {
+            "type": "image",
+            "url": "http://pics.ovo.top/diff_ev_day_16084739630360005qxwl7rj2guyezpi.jpg"
+          },
+          {
+            "type": "image",
+            "url": "http://pics.ovo.top/diff_ev_day_16084739630360016qxep4hnv3o9mjwc.jpg"
+          }
+        ]
+      }
+    }
+  ]
+}
