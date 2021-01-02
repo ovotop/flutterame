@@ -6,7 +6,9 @@ else
 module_name=$1
 fi
 
+if [ -d modules/$module_name/.android ];then
 bin/optimize_cn_network.py modules/$module_name/.android 
+fi
 
 last_dir=`pwd`
 

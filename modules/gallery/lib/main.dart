@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gallery/galleria.dart';
+import 'package:gallery/routes.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,12 +13,19 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Module: gallery'),
+      initialRoute: '/',
+      onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
+
+  void _gotoAbout(BuildContext context) {
+    // Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => GalleryAbout()));
+    Navigator.pushNamed(context, "/gallery/about");
+  }
 
   final String title;
   @override
@@ -27,6 +35,12 @@ class MyHomePage extends StatelessWidget {
         title: Text(title),
       ),
       body: Center(child: Galleria()),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          this._gotoAbout(context);
+        },
+        child: Text("About"),
+      ),
     );
   }
 }

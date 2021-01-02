@@ -7,36 +7,46 @@ var cardColor = Colors.orange;
 
 class Galleria extends StatelessWidget {
   const Galleria();
-  Widget _buildItem(gallery) {
-    // const Color fontColor = Colors.orange[900];
-    return AspectRatio(
-        aspectRatio: 4 / 3,
-        child: Card(
-            margin: EdgeInsets.all(8),
-            color: cardColor,
-            shape: ContinuousRectangleBorder(
-              borderRadius: BorderRadius.circular(32),
-            ),
-            child: Container(
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                  Container(
-                      child: Text(gallery["name"],
-                          style: TextStyle(color: fontColor, fontSize: 16)),
-                      padding: EdgeInsets.only(left: 8)),
-                  AspectRatio(
-                      aspectRatio: 16 / 9,
-                      child:
-                          Image.network(gallery["cover"], fit: BoxFit.cover)),
-                  Container(
-                    child: Text('${gallery["page"].length}P',
-                        style: TextStyle(color: fontColor, fontSize: 8)),
-                    padding: EdgeInsets.only(right: 8),
-                    alignment: Alignment.centerRight,
-                  ),
-                ]))));
+  Widget _buildItem(context, gallery) {
+    return InkWell(
+        onTap: () {
+          Navigator.pushNamed(context, "/gallery/detail", arguments: gallery);
+        },
+        child: AspectRatio(
+            aspectRatio: 4 / 3,
+            child: Card(
+                margin: EdgeInsets.all(8),
+                color: cardColor,
+                shape: ContinuousRectangleBorder(
+                  borderRadius: BorderRadius.circular(32),
+                ),
+                child: Container(
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                      Container(
+                          child: Hero(
+                              tag: 'title',
+                              child: Material(
+                                  color: Colors.transparent,
+                                  child: Text(gallery["name"],
+                                      style: TextStyle(
+                                          color: fontColor, fontSize: 20)))),
+                          padding: EdgeInsets.only(left: 8)),
+                      AspectRatio(
+                          aspectRatio: 16 / 9,
+                          child: Hero(
+                              tag: 'cover',
+                              child: Image.network(gallery["cover"],
+                                  fit: BoxFit.cover))),
+                      Container(
+                        child: Text('${gallery["page"].length}P',
+                            style: TextStyle(color: fontColor, fontSize: 8)),
+                        padding: EdgeInsets.only(right: 8),
+                        alignment: Alignment.centerRight,
+                      ),
+                    ])))));
   }
 
   Widget _buildLoaded(data) {
@@ -44,7 +54,7 @@ class Galleria extends StatelessWidget {
     return ListView.builder(
       itemBuilder: (context, index) {
         var gallery = galleries[index];
-        return _buildItem(gallery);
+        return _buildItem(context, gallery);
       },
       itemCount: galleries.length,
     );
