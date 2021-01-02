@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       ),
       home: MyHomePage(title: 'Module: gallery'),
       initialRoute: '/',
-      onGenerateRoute: RouteGenerator.generateRoute,
+      onGenerateRoute: GalleryRouteGenerator.generateRoute,
     );
   }
 }

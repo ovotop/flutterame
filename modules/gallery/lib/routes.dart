@@ -3,7 +3,7 @@ import 'package:gallery/main.dart';
 import 'package:gallery/detail.dart';
 import 'package:gallery/about.dart';
 
-class RouteGenerator {
+class GalleryRouteGenerator {
   //配置路由
   static final routes = {
     "/": (context, {arguments}) => MyHomePage(title: '画廊'),
