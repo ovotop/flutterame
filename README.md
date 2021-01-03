@@ -1,4 +1,4 @@
-# flutterame
+# Flutterame
 
 **Flutterame = Flutter + Frame**
 
