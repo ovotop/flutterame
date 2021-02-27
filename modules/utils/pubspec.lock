@@ -43,13 +43,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.15.0"
-  cupertino_icons:
+  dio:
     dependency: "direct main"
     description:
-      name: cupertino_icons
+      name: dio
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.0.0"
+    version: "3.0.10"
   fake_async:
     dependency: transitive
     description:
@@ -67,13 +67,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  gallery:
-    dependency: "direct main"
+  http_parser:
+    dependency: transitive
     description:
-      path: "modules/gallery"
-      relative: true
-    source: path
-    version: "1.0.0+1"
+      name: http_parser
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "3.1.4"
   matcher:
     dependency: transitive
     description:
