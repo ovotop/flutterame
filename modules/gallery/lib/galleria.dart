@@ -51,13 +51,18 @@ class Galleria extends StatelessWidget {
 
   Widget _buildLoaded(data) {
     var galleries = data['galleries'];
-    return ListView.builder(
-      itemBuilder: (context, index) {
-        var gallery = galleries[index];
-        return _buildItem(context, gallery);
-      },
-      itemCount: galleries.length,
-    );
+    return Center(
+        child: AspectRatio(
+            aspectRatio: 0.8,
+            child: Container(
+                // decoration: BoxDecoration(color: Colors.red),
+                child: ListView.builder(
+              itemBuilder: (context, index) {
+                var gallery = galleries[index];
+                return _buildItem(context, gallery);
+              },
+              itemCount: galleries.length,
+            ))));
   }
 
   @override
