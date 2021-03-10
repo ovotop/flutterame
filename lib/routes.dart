@@ -15,10 +15,17 @@ class RouteGenerator {
     final String name = settings.name;
     final Function pageContentBuilder = routes[name];
     if (pageContentBuilder != null) {
-      final Route route = MaterialPageRoute(
-          builder: (context) =>
-              pageContentBuilder(context, arguments: settings.arguments));
-      return route;
+      return PageRouteBuilder(
+          pageBuilder: (context, __, ___) =>
+              pageContentBuilder(context, arguments: settings.arguments),
+          transitionDuration: Duration(milliseconds: 150),
+          transitionsBuilder: (_, a, __, c) =>
+              FadeTransition(opacity: a, child: c));
+
+      // final Route route = MaterialPageRoute(
+      //     builder: (context) =>
+      //         å(context, arguments: settings.arguments));
+      // return route;
     } else {
       return _errorPage('找不到页面');
     }
