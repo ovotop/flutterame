@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gallery/main.dart';
+import 'package:gallery/gallery_home.dart';
 import 'package:gallery/detail.dart';
 import 'package:gallery/about.dart';
 
