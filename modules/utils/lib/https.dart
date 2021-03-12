@@ -6,7 +6,7 @@ class Https {
     try {
       Response response = await Dio().get(url, queryParameters: params);
       print(response.toString());
-      Map<String, dynamic> data = jsonDecode(response.toString());
+      Map<String, dynamic>? data = jsonDecode(response.toString());
       return data;
     } catch (e) {
       print(e);
