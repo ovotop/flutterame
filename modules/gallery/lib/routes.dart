@@ -12,8 +12,8 @@ class GalleryRouteGenerator {
   };
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
-    final String name = settings.name;
-    final Function pageContentBuilder = routes[name];
+    final String? name = settings.name;
+    final Function? pageContentBuilder = routes[name!];
     if (pageContentBuilder != null) {
       final Route route = MaterialPageRoute(
           builder: (context) =>

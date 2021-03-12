@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gallery/galleria.dart';
 
 class MyHomePage extends StatelessWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   void _gotoAbout(BuildContext context) {
     // Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => GalleryAbout()));
