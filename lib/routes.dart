@@ -12,8 +12,8 @@ class RouteGenerator {
   };
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
-    final String name = settings.name;
-    final Function pageContentBuilder = routes[name];
+    final String? name = settings.name;
+    final Function? pageContentBuilder = routes[name!];
     if (pageContentBuilder != null) {
       return PageRouteBuilder(
           pageBuilder: (context, __, ___) =>

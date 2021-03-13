@@ -3,7 +3,7 @@ import 'package:gallery/galleria.dart';
 import 'package:flutterame/mine.dart';
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -14,7 +14,7 @@ class MyHomePage extends StatefulWidget {
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
 
-  final String title;
+  final String? title;
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   List<BottomNavigationBarItem> _createTabs() {
-    List<BottomNavigationBarItem> list = new List<BottomNavigationBarItem>();
+    List<BottomNavigationBarItem> list = [];
     TabItems.forEach((TabItem key, Map value) {
       list.add(BottomNavigationBarItem(
           icon: Icon(value['icon']), label: value['title']));
@@ -71,9 +71,9 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: Text(widget.title!),
       ),
-      body: TabItems[_currentTab]['widget'],
+      body: TabItems[_currentTab]!['widget'] as Widget?,
       bottomNavigationBar: BottomNavigationBar(
         items: _createTabs(),
         currentIndex: _selectIndex,
