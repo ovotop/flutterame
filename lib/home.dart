@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   List<BottomNavigationBarItem> _createTabs() {
-    List<BottomNavigationBarItem> list = new List<BottomNavigationBarItem>();
+    List<BottomNavigationBarItem> list = [];
     TabItems.forEach((TabItem key, Map value) {
       list.add(BottomNavigationBarItem(
           icon: Icon(value['icon']), label: value['title']));
