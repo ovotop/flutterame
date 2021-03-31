@@ -46,24 +46,28 @@ def optimize_cn_network(target_file):
     new_lines = replace_lines(
         r'\s*google().*',
         by_lines=[
-            "        maven { url 'https://maven.aliyun.com/repository/google'} // google()"],
+            "        maven {"
+            " url 'https://maven.aliyun.com/repository/google'}"
+            " // google()"],
         begin_reg=r'\s*repositories\s*{.*',
         end_reg=r'\s*}.*',
         in_lines=lines)
 
-    if(new_lines == None):
+    if(new_lines is None):
         has_google = False
         new_lines = lines
 
     new_lines = replace_lines(
         r'\s*jcenter().*',
         by_lines=[
-            "        maven { url 'https://maven.aliyun.com/repository/jcenter'} // jcenter()"],
+            "        maven {"
+            " url 'https://maven.aliyun.com/repository/jcenter'}"
+            " // jcenter()"],
         begin_reg=r'\s*repositories\s*{.*',
         end_reg=r'\s*}.*',
         in_lines=new_lines)
 
-    if new_lines == None and not has_google:
+    if new_lines is None and not has_google:
         print(f"No line to optimize in file: {target_file}")
         return
 
@@ -76,7 +80,8 @@ def optimize_cn_network(target_file):
 if __name__ == "__main__":
     if len(sys.argv) == 1:
         print(
-            "Input android project dir(example: 'android/' or 'modules/gallery/.android' ):")
+            "Input android project dir("
+            "example: 'android/' or 'modules/xxx/.android' ):")
         target_dir = input()
     else:
         target_dir = sys.argv[1]
