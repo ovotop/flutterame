@@ -12,7 +12,7 @@ fi
 
 last_dir=`pwd`
 
-cd plugins/$plugin_name/
+cd plugins/$plugin_name/example
 flutter run --dart-define=IS_RUN_ALONE=true
 cd $last_dir
 
