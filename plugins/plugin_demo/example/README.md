@@ -1,16 +1,12 @@
 # plugin_demo_example
 
-Demonstrates how to use the plugin_demo plugin.
 
-## Getting Started
+## PlatformView
+[Hosting native Android and iOS views in your Flutter app with Platform Views](https://flutter.dev/docs/development/platform-integration/platform-views)
 
-This project is a starting point for a Flutter application.
+[Flutter PlatformView: How to create Widgets from Native Views](https://medium.com/flutter-community/flutter-platformview-how-to-create-flutter-widgets-from-native-views-366e378115b6)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[Implement PlatformView support on macOS #41722](https://github.com/flutter/flutter/issues/41722)
+[Support Texture widget in macOS embedding #30717](https://github.com/flutter/flutter/issues/30717)
+[PR:Add texture support for macOS shell. #8507](https://github.com/flutter/engine/pull/8507)
