@@ -3,6 +3,7 @@ import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:plugin_demo/plugin_demo.dart';
+import 'package:plugin_demo/android_hybrid_composition_plugin.dart';
 
 void main() {
   runApp(MyApp());
@@ -46,13 +47,26 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app'),
-        ),
-        body: Center(
-          child: Text('Running on: $_platformVersion\n'),
-        ),
-      ),
+          appBar: AppBar(
+            title: const Text('Plugin example app'),
+          ),
+          body: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(
+                    child:
+                        Center(child: Text('Running on: $_platformVersion\n')),
+                    height: 100),
+                SizedBox(
+                    child: Center(child: AndroidHybridCompositionPluginView()),
+                    height: 400),
+                SizedBox(
+                    child: Center(child: AndroidHybridCompositionPluginView()),
+                    height: 400),
+                //  ,
+              ],
+            ),
+          )),
     );
   }
 }
