@@ -8,8 +8,14 @@ class MainActivity : FlutterActivity() {
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
         flutterEngine
-                .platformViewsController
-                .registry
-                .registerViewFactory("hybrid-composition-plugin-view", PluginViewFactory())
+            .platformViewsController
+            .registry
+            .registerViewFactory("hybrid-composition-plugin-view", PluginViewFactory())
+
+        flutterEngine
+            .platformViewsController
+            .registry
+            .registerViewFactory("virtual-display-plugin-view", PluginViewFactory())
+
     }
 }

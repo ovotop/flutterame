@@ -4,6 +4,7 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:plugin_demo/plugin_demo.dart';
 import 'package:plugin_demo/android_hybrid_composition_plugin.dart';
+import 'package:plugin_demo/android_virtual_display_plugin.dart';
 
 void main() {
   runApp(MyApp());
@@ -58,7 +59,7 @@ class _MyAppState extends State<MyApp> {
                         Center(child: Text('Running on: $_platformVersion\n')),
                     height: 100),
                 SizedBox(
-                    child: Center(child: AndroidHybridCompositionPluginView()),
+                    child: Center(child: AndroidVirtualDisplayPluginView()),
                     height: 400),
                 SizedBox(
                     child: Center(child: AndroidHybridCompositionPluginView()),
