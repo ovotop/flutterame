@@ -17,8 +17,8 @@ internal class PluginView(context: Context, id: Int, creationParams: Map<String?
 
     init {
         textView = TextView(context)
-        textView.textSize = 72f
-        textView.setBackgroundColor(Color.rgb(255, 255, 255))
+        textView.textSize = 16f
+        textView.setBackgroundColor(Color.rgb(127, 255, 127))
         textView.text = "Rendered on a native Android view (id: $id)"
     }
 }
