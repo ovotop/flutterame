@@ -8,6 +8,7 @@ import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.PluginRegistry.Registrar
+import dev.flutter.example.PluginViewFactory
 
 /** PluginDemoPlugin */
 class PluginDemoPlugin: FlutterPlugin, MethodCallHandler {
@@ -20,6 +21,14 @@ class PluginDemoPlugin: FlutterPlugin, MethodCallHandler {
   override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
     channel = MethodChannel(flutterPluginBinding.binaryMessenger, "plugin_demo")
     channel.setMethodCallHandler(this)
+
+    flutterPluginBinding
+      .platformViewRegistry
+      .registerViewFactory("hybrid-composition-plugin-view", PluginViewFactory())
+
+    flutterPluginBinding
+      .platformViewRegistry
+      .registerViewFactory("virtual-display-plugin-view", PluginViewFactory())
   }
 
   override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {

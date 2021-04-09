@@ -25,7 +25,9 @@ dependencies:
     sdk: flutter
   gallery:
     path: modules/gallery
-    
+  plugin_demo:
+    path: plugins/plugin_demo
+      
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0

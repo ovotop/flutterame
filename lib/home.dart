@@ -1,18 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gallery/galleria.dart';
+import 'package:plugin_demo/plugin_demo_view.dart';
 import 'package:flutterame/mine.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
 
   final String title;
 
@@ -20,11 +12,21 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-enum TabItem { galleria, mine }
+enum TabItem { galleria, plugin, mine }
 
+// https://api.flutter.dev/flutter/material/Icons-class.html
 const TabItems = {
-  TabItem.galleria: {'icon': Icons.school, 'title': '画廊', 'widget': Galleria()},
-  TabItem.mine: {'icon': Icons.more_horiz, 'title': '我的', 'widget': Mine()}
+  TabItem.galleria: {
+    'icon': Icons.extension,
+    'title': '组件',
+    'widget': Galleria()
+  },
+  TabItem.plugin: {
+    'icon': Icons.power,
+    'title': '插件',
+    'widget': PluginDemoView()
+  },
+  TabItem.mine: {'icon': Icons.face, 'title': '我的', 'widget': Mine()}
 };
 
 TabItem _getTypeByIndex(int index) {
@@ -61,16 +63,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
       body: TabItems[_currentTab]!['widget'] as Widget?,
