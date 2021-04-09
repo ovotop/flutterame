@@ -6,6 +6,9 @@ public class SwiftPluginDemoPlugin: NSObject, FlutterPlugin {
     let channel = FlutterMethodChannel(name: "plugin_demo", binaryMessenger: registrar.messenger())
     let instance = SwiftPluginDemoPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
+
+    let factory = PluginViewFactory(messenger: (registrar.messenger()))
+    registrar.register(factory, withId: "ui-kit-plugin-view")
   }
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {

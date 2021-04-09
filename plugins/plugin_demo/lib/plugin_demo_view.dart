@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
-import 'package:plugin_demo/android_hybrid_composition_plugin.dart';
-import 'package:plugin_demo/android_virtual_display_plugin.dart';
+import 'android_hybrid_composition_plugin.dart';
+import 'android_virtual_display_plugin.dart';
+import 'ios_ui_kit_view_plugin.dart';
 
 class PluginDemoView extends StatelessWidget {
   const PluginDemoView();
@@ -13,16 +14,19 @@ class PluginDemoView extends StatelessWidget {
           Text('AndroidVirtualDisplayPluginView'),
           SizedBox(
               child: Center(child: AndroidVirtualDisplayPluginView()),
-              height: 400),
+              height: 200),
           SizedBox(height: 10),
           Text('AndroidHybridCompositionPluginView'),
           SizedBox(
               child: Center(child: AndroidHybridCompositionPluginView()),
-              height: 400),
+              height: 200),
           SizedBox(height: 10),
         ];
       case TargetPlatform.iOS:
-        return [Text('iOS')];
+        return [
+          Text('iOSUikitView'),
+          SizedBox(child: Center(child: IOSUiKitView()), height: 200),
+        ];
       default:
         return [];
     }
