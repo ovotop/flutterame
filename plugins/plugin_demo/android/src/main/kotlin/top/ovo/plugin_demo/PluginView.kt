@@ -1,4 +1,4 @@
-package dev.flutter.example
+package top.ovo.plugin_demo
 
 import android.content.Context
 import android.graphics.Color

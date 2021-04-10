@@ -8,7 +8,8 @@ import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.PluginRegistry.Registrar
-import dev.flutter.example.PluginViewFactory
+
+import top.ovo.plugin_demo.PluginViewFactory
 
 /** PluginDemoPlugin */
 class PluginDemoPlugin: FlutterPlugin, MethodCallHandler {
